@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Christian Wagner chriswayg@gmail.com
+MAINTAINER Joao Moraes joaomoraesbr@gmail.com
 
 # Usage:
 # docker run -d --name=apache-php -p 8080:80 -p 8443:443 chriswayg/apache-php
