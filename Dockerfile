@@ -3,6 +3,7 @@ MAINTAINER Christian Wagner chriswayg@gmail.com
 
 # Usage:
 # docker run -d --name=apache-php -p 8080:80 -p 8443:443 chriswayg/apache-php
+
 # webroot: /var/www/html/
 # Apache2 config: /etc/apache2/
 
