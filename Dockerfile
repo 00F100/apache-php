@@ -10,7 +10,8 @@ RUN apt-get update && \
       DEBIAN_FRONTEND=noninteractive apt-get -y install \
       apache2 \
       libapache2-mod-php5 \
-      php5 && \
+      php5 \
+      php5-intl && \
     apt-get clean && rm -r /var/lib/apt/lists/*
 
 # Apache + PHP requires preforking Apache for best results & enable Apache SSL
@@ -25,9 +26,9 @@ RUN a2dismod mpm_event && \
 
 WORKDIR /var/www/html
 
-COPY apache2-foreground /usr/local/bin/
-
 EXPOSE 80
 EXPOSE 443
 
-CMD ["apache2-foreground"]
+RUN rm -f /var/run/apache2/apache2.pid
+
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
