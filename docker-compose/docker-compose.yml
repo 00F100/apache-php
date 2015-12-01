@@ -1,0 +1,11 @@
+server_apache2_php:
+    image: joaomoraesbr/apache-php
+    volumes:
+        - /path/to/etc/apache2/sites-available:/etc/apache2/sites-available/
+        - /path/to/etc/apache2/sites-enabled:/etc/apache2/sites-enabled/
+        - /path/to/var/www/html:/var/www/html/
+        - /path/to/etc/hosts:/etc/hosts
+        - /path/to/var/log/apache2:/var/log/apache2/
+    ports:
+        - 80:80
+        - 443:443
