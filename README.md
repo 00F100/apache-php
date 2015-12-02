@@ -3,7 +3,9 @@
 ## How to use
 
 1) Install docker-compose (https://docs.docker.com/compose/)
+
 2) Go to dir ./docker-compose/
+
 3) Run: docker-compose up -d
 
 Docker image with Apache2 web server and PHP based on the official Debian Jessie image
