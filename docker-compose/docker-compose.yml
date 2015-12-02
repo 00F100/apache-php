@@ -1,4 +1,4 @@
-server_apache2_php:
+apache-php:
     image: joaomoraesbr/apache-php
     volumes:
         - /path/to/etc/apache2/sites-available:/etc/apache2/sites-available/

@@ -12,6 +12,7 @@ RUN apt-get update && \
       apache2 \
       libapache2-mod-php5 \
       php5 \
+      php5-mysql \
       php5-intl && \
     apt-get clean && rm -r /var/lib/apt/lists/*
 
