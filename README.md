@@ -1,10 +1,16 @@
 # apache-php for Docker
 
+## How to use
+
+1) Install docker-compose (https://docs.docker.com/compose/)
+2) Go to dir ./docker-compose/
+3) Run: docker-compose up -d
+
 Docker image with Apache2 web server and PHP based on the official Debian Jessie image
 
 [![](https://badge.imagelayers.io/chriswayg/apache-php:latest.svg)](https://imagelayers.io/?images=chriswayg/apache-php:latest)
 
-- Apache 2.4 web server 
+- Apache 2.4 web server
 - HTTPS/SSL enabled
 - PHP 5.6
 - logging enabled
@@ -19,7 +25,7 @@ The Apache HTTP Server, colloquially called Apache, is a Web server application 
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/master/httpd/logo.png)
 
-## PHP 
+## PHP
 
 PHP is a server-side scripting language designed for web development, but which can also be used as a general-purpose programming language. PHP can be added to straight HTML or it can be used with a variety of templating engines and web frameworks. PHP code is usually processed by an interpreter, which is here implemented as a native module. Apache and PHP requires preforking Apache for best results.
 
