@@ -6,6 +6,10 @@ apache-php:
         - /path/to/var/www/html:/var/www/html/
         - /path/to/etc/hosts:/etc/hosts
         - /path/to/var/log/apache2:/var/log/apache2/
+        - /path/to/certs:/certs/
     ports:
         - 80:80
         - 443:443
+    environment:
+        - REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt
+        - REGISTRY_HTTP_TLS_KEY=/certs/domain.key

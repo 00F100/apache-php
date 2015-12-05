@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu
 MAINTAINER Joao Moraes joaomoraesbr@gmail.com
 
 # Usage:
@@ -11,9 +11,15 @@ RUN apt-get update && \
       DEBIAN_FRONTEND=noninteractive apt-get -y install \
       apache2 \
       libapache2-mod-php5 \
+      mysql-client \
       php5 \
       php5-mysql \
+      php5-mcrypt \
+      php5-curl \
+      php5-gd \
+      php5-fpm \
       php5-intl && \
+    update-ca-certificates && \
     apt-get clean && rm -r /var/lib/apt/lists/*
 
 # Apache + PHP requires preforking Apache for best results & enable Apache SSL
